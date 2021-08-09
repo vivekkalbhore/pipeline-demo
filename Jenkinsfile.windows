@@ -1,14 +1,14 @@
-node('windows-node') {
+node('Jenkin_Windows_Worker') {
    def mvnHome
    stage('Preparation') { 
       
-      git 'https://github.com/devopsguru91/simple-maven-project-with-tests'
+      git 'https://github.com/vivekkalbhore/NewJenkinsPipeline.git'
                 
-      mvnHome = ' C:\\ProgramData\\chocolatey\\lib\\maven\\apache-maven-3.8.1\\'
+      mvnHome = 'C:\ProgramData\chocolatey\lib\maven\apache-maven-3.8.1\'
    }
    stage('Build') {
       
-         bat "${mvnHome}\\bin\\mvn -Dmaven.test.failure.ignore clean package"
+         bat "'${mvnHome}\\bin\\mvn' -Dmaven.test.failure.ignore clean package"
       
    }
    stage('Results') {
