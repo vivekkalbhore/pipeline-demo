@@ -4,7 +4,7 @@ node('Jenkin_Windows_Worker') {
       
       git 'https://github.com/vivekkalbhore/NewJenkinsPipeline.git'
                 
-      mvnHome = 'C:\ProgramData\chocolatey\lib\maven\apache-maven-3.8.1\'
+      mvnHome = 'C:\\ProgramData\\chocolatey\\lib\\maven\\apache-maven-3.8.1\\'
    }
    stage('Build') {
       
