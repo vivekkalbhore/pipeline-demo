@@ -8,7 +8,7 @@ node() {
    }
    stage('Build') {
       
-         sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
+         bat "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
       
    }
    stage('Results') {
